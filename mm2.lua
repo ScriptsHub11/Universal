@@ -6,6 +6,6 @@ loadstring([[
     wait(2)
 
     pcall(function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/vertex-peak/vertex/refs/heads/main/loadstring"))()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-YARHM-12403"))()
     end)
 ]])()
